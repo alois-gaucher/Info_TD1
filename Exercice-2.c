@@ -5,14 +5,18 @@
 
 #include <stdio.h>
 
-int prix, somme, total;
+float prix, somme, total, moyenne;
+int nb = 0;
 
 int main()
 {
 	do {
 		printf("Prix de l'article: \n");
-		scanf("%d", &prix);
+		scanf("%f", &prix);
+	if ( prix != (0) ) {
 		somme += prix;
+		nb += 1;
+	}
 	} while ( prix != (0) ); // Condition de sortie de la boucle 0
 	if ( somme < 99 ) {
 		total = somme;
@@ -27,7 +31,9 @@ int main()
 		total = somme * 0.70;
 	}
 
-	printf("Le montant des articles est: %d€ \n", total);
+	printf("Le montant des articles est: %f€ \n", total);
+	moyenne = total/nb;
+	printf("La moyenne est égale à: %f€ \n", moyenne);
 
     return 0;
 }
