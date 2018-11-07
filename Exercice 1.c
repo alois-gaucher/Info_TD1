@@ -5,16 +5,16 @@
 
 #include <stdio.h>
 
-int a,b,c;
+float a,b,c;
 
 int main()
 {
 	printf("Saisissez le premier nombre à additionner \n");
-    scanf("%d" ,&a);
+    scanf("%f" ,&a);
     printf("Saisissez le second nombre à additionner \n");
-    scanf("%d" ,&b);
+    scanf("%f" ,&b);
     c = a + b;
-    printf("Le résultat de l'opération est %d \n", c);
+    printf("Le résultat de l'opération est %f \n", c);
 
     return 0;
 }
